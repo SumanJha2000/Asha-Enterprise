@@ -1,0 +1,7 @@
+{
+  "exec": "vite",
+  "watch": ["src", "index.html", "vite.config.ts"],
+  "ext": "ts,tsx,css,html,json",
+  "ignore": ["node_modules", "dist"],
+  "delay": 500
+}
