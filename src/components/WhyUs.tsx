@@ -4,20 +4,29 @@ const REASONS = [
   {
     icon: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
       </svg>
     ),
-    title: 'ISI & ISO Certified Products',
-    desc: 'Every product we supply carries BIS certification and meets IS standards — ensuring safety and long-term performance.',
+    title: 'In-House Manufacturing',
+    desc: 'We build every door in our own workshop — full control over quality, sizing and finish, with no third-party delays.',
   },
   {
     icon: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg>
     ),
-    title: 'Expert Plumbing Team',
-    desc: 'Our 30+ strong team of ITI-qualified plumbers bring years of hands-on experience to every project, big or small.',
+    title: '10-Year Warranty',
+    desc: 'Industry-leading 10-year warranty on materials and workmanship — because we believe in what we build.',
+  },
+  {
+    icon: (
+      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+      </svg>
+    ),
+    title: 'Free Site Survey',
+    desc: 'A trained surveyor visits your space, takes precise measurements and advises on the best door system for your needs.',
   },
   {
     icon: (
@@ -26,55 +35,48 @@ const REASONS = [
       </svg>
     ),
     title: 'Transparent Pricing',
-    desc: 'No hidden surprises. You receive a detailed itemised quote before work begins — what we quote is what you pay.',
+    desc: 'Detailed written quote before any work starts. No hidden extras, no surprises when the invoice arrives.',
   },
   {
     icon: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: 'Easy EMI & Payment Options',
-    desc: 'Flexible payment terms for large projects. We accept cash, UPI, NEFT, cheque, and card — pay the way you prefer.',
+    title: 'Expert Installers',
+    desc: '25+ certified installers with 5+ years of experience each — trained to handle any door system cleanly and safely.',
   },
   {
     icon: (
       <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
       </svg>
     ),
-    title: 'Workmanship Warranty',
-    desc: 'We stand behind our work with a 1-year workmanship warranty on all plumbing installations and repairs.',
-  },
-  {
-    icon: (
-      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: 'Wide Service Coverage',
-    desc: 'We serve Mumbai, Thane, Navi Mumbai, and surrounding districts. Our teams are strategically placed for faster reach.',
+    title: '50+ Door Styles',
+    desc: 'Visit our 2,000 sq ft showroom in Thane to see over 50 door samples across UPVC, aluminium, wood and glass ranges.',
   },
 ];
 
 const TESTIMONIALS = [
   {
-    name: 'Ramesh Nair',
-    role: 'Property Manager, Thane',
-    text: 'Asha Enterprise handled the complete plumbing of our 120-flat housing society. Work was done on time, within budget, and the quality is excellent. Highly recommended!',
+    name: 'Kavita Mehta',
+    role: 'Homeowner, Powai',
+    img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80',
+    text: 'Asha Enterprise transformed our living room with a stunning set of aluminium bifold doors. The team was professional, punctual and the finish is absolutely beautiful. Best decision we made in our home renovation.',
     rating: 5,
   },
   {
-    name: 'Priya Sharma',
-    role: 'Homeowner, Navi Mumbai',
-    text: 'They renovated both my bathrooms — new tiles, fixtures, concealed pipework, everything. The team was professional, clean, and very cooperative. Will use them again.',
+    name: 'Rohan Desai',
+    role: 'Architect, Mumbai',
+    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80',
+    text: 'I recommend Asha Enterprise to all my clients. Their custom manufacturing capability means no opening is too large or awkward. The glass partition systems they installed in our office project were flawless.',
     rating: 5,
   },
   {
-    name: 'Abdul Khan',
-    role: 'Factory Owner, Bhiwandi',
-    text: 'We had a critical pipeline breakdown on a Sunday night. Asha\'s emergency team arrived within 90 minutes and had everything fixed before morning shift. Exceptional service.',
+    name: 'Sheela Iyer',
+    role: 'Hotel Owner, Thane',
+    img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80',
+    text: 'We needed 28 wardrobe door sets installed across our boutique hotel — all completed in 4 days with zero disruption to guests. The quality and service was outstanding. Highly recommended.',
     rating: 5,
   },
 ];
@@ -97,7 +99,7 @@ export default function WhyUs() {
           <span className="badge">Why Choose Us</span>
           <h2 className="section-title">The Asha Advantage</h2>
           <p className="section-sub">
-            We don't just fix pipes — we build lasting relationships through quality, honesty, and reliability.
+            Over 1,500 installations and 12 years of expertise — here's why clients keep coming back.
           </p>
         </div>
 
@@ -111,7 +113,6 @@ export default function WhyUs() {
           ))}
         </div>
 
-        {/* Testimonials */}
         <div className="testimonials-header">
           <span className="badge">Client Reviews</span>
           <h2 className="section-title">What Our Clients Say</h2>
@@ -121,9 +122,7 @@ export default function WhyUs() {
           {TESTIMONIALS.map((t) => (
             <div className="testimonial-card" key={t.name}>
               <div className="tcard-top">
-                <div className="tcard-avatar">
-                  {t.name.split(' ').map((n) => n[0]).join('')}
-                </div>
+                <img className="tcard-avatar" src={t.img} alt={t.name} />
                 <div>
                   <div className="tcard-name">{t.name}</div>
                   <div className="tcard-role">{t.role}</div>
@@ -137,8 +136,8 @@ export default function WhyUs() {
 
         <div className="cta-banner">
           <div className="cta-banner__text">
-            <h3>Ready to get started?</h3>
-            <p>Contact us today for a free site visit and detailed estimate.</p>
+            <h3>Ready to transform your space?</h3>
+            <p>Book a free site visit today — no obligation, no pressure.</p>
           </div>
           <div className="cta-banner__actions">
             <a href="tel:+919876543210" className="btn btn-outline">
@@ -147,9 +146,7 @@ export default function WhyUs() {
               </svg>
               Call Now
             </a>
-            <a href="#contact" className="btn btn-primary">
-              Send Enquiry
-            </a>
+            <a href="#contact" className="btn btn-primary">Book Free Visit</a>
           </div>
         </div>
       </div>

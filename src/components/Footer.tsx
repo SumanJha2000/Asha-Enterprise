@@ -10,25 +10,25 @@ const QUICK_LINKS = [
 ];
 
 const SERVICES_LIST = [
-  'Residential Plumbing',
-  'Commercial Plumbing',
-  'Pipeline Installation',
-  'Leak Detection & Repair',
-  'Bathroom Renovation',
-  'Water Tank Installation',
-  'Pump Installation & Service',
-  'Emergency Services',
+  'Residential Installation',
+  'Commercial Projects',
+  'Custom Manufacturing',
+  'Repair & Servicing',
+  'Measurement & Design',
+  'Wardrobe Door Systems',
+  'Glass Partition Systems',
+  'Emergency Repairs',
 ];
 
 const PRODUCTS_LIST = [
-  'CPVC / UPVC / PPR Pipes',
-  'GI & MS Pipes',
-  'Ball & Gate Valves',
-  'Submersible Pumps',
-  'Monoblock Pumps',
-  'PVC & SS Water Tanks',
-  'Sanitary Ware',
-  'Bathroom Fittings & Faucets',
+  'UPVC Bifold & Sliding Fold',
+  'Aluminium Bifold Doors',
+  'Solid Hardwood Bifold',
+  'Frameless Glass Bifold',
+  'Office Glass Partitions',
+  'Mirror Wardrobe Doors',
+  'Concertina Doors',
+  'Door Hardware & Track Systems',
 ];
 
 export default function Footer() {
@@ -51,12 +51,13 @@ export default function Footer() {
               </span>
               <span>
                 <span className="footer-logo-name">Asha Enterprise</span>
-                <span className="footer-logo-tagline">Plumbing Solutions & Products</span>
+                <span className="footer-logo-tagline">Folding Door Specialists</span>
               </span>
             </div>
             <p className="footer-about">
-              Asha Enterprise is a trusted name in plumbing services and products since 2009.
-              We serve residential, commercial, and industrial clients across Mumbai, Thane, and Navi Mumbai.
+              Asha Enterprise is a premium folding door specialist since 2010. We design, manufacture
+              and install UPVC, aluminium, wooden and glass folding door systems for homes and businesses
+              across Mumbai, Thane and Navi Mumbai.
             </p>
             <div className="footer-gst">
               <span>GSTIN: 27AAAAE1234F1Z5</span>

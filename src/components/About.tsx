@@ -1,11 +1,11 @@
 import './About.css';
 
 const MILESTONES = [
-  { year: '2009', event: 'Founded in Mumbai with a small team of 5 plumbing experts.' },
-  { year: '2013', event: 'Expanded to commercial & industrial plumbing projects.' },
-  { year: '2017', event: 'Opened product showroom with 200+ plumbing products.' },
-  { year: '2021', event: 'Served 1,500+ satisfied clients across the region.' },
-  { year: '2024', event: 'Launched 24/7 emergency response and online enquiry portal.' },
+  { year: '2010', event: 'Founded in Mumbai, specialising in residential folding door installations.' },
+  { year: '2014', event: 'Expanded to commercial projects — offices, hotels and retail spaces.' },
+  { year: '2018', event: 'Opened our own manufacturing unit for custom-sized folding doors.' },
+  { year: '2022', event: 'Launched a 2,000 sq ft showroom displaying 50+ door samples.' },
+  { year: '2024', event: 'Reached 1,500+ installations with a 10-year workmanship warranty.' },
 ];
 
 export default function About() {
@@ -13,20 +13,23 @@ export default function About() {
     <section className="section" id="about">
       <div className="container about__inner">
         <div className="about__visual">
-          <div className="about__img-card">
-            <div className="about__icon-block">
-              <svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="#2196f3" strokeWidth="1.3">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          <div className="about__photo-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=640&q=85"
+              alt="Asha Enterprise showroom with folding door displays"
+              className="about__photo"
+            />
+            <div className="about__photo-chip">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#f97316" strokeWidth="2.2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
-            </div>
-            <h3>15+ Years of Excellence</h3>
-            <p>Serving residential and commercial clients with uncompromising quality</p>
-            <div className="about__img-badges">
-              <span>ISO Certified</span>
-              <span>Licensed Plumbers</span>
-              <span>Insured</span>
+              <div>
+                <strong>ISO Certified</strong>
+                <span>Reg. No MH/2010/FD/0872</span>
+              </div>
             </div>
           </div>
+
           <div className="about__timeline">
             {MILESTONES.map((m) => (
               <div className="timeline-item" key={m.year}>
@@ -42,19 +45,30 @@ export default function About() {
 
         <div className="about__text">
           <span className="badge">Who We Are</span>
-          <h2 className="section-title">Built on Trust,<br />Driven by Quality</h2>
+          <h2 className="section-title">Crafting Spaces with<br />Elegant Folding Doors</h2>
           <p className="about__para">
-            Asha Enterprise is a leading plumbing solutions provider established in 2009.
-            We combine deep technical expertise with a customer-first approach to deliver
-            outstanding results for homes, offices, factories, and large commercial projects.
+            Asha Enterprise is Mumbai's leading folding door specialist, established in 2010.
+            We design, manufacture, supply and install premium folding door systems — from
+            compact UPVC bifolds to large-format aluminium and glass partitions.
           </p>
           <p className="about__para">
-            Our team of licensed and experienced plumbers is equipped with modern tools and
-            industry best practices. We supply and install premium-grade products from India's
-            top manufacturers, ensuring durability, performance, and value for money.
+            Our in-house team of designers and certified installers work closely with homeowners,
+            architects and interior designers to deliver bespoke door solutions that perfectly
+            match the space, style and budget.
           </p>
 
           <div className="about__features">
+            <div className="about__feature">
+              <div className="feature-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </div>
+              <div>
+                <h4>Custom Manufacturing</h4>
+                <p>Every door built to your exact dimensions, finish and hardware choice.</p>
+              </div>
+            </div>
             <div className="about__feature">
               <div className="feature-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -62,8 +76,19 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4>Licensed & Certified</h4>
-                <p>All our plumbers are fully licensed, insured and undergo regular training.</p>
+                <h4>10-Year Warranty</h4>
+                <p>Industry-leading warranty on all materials and installation workmanship.</p>
+              </div>
+            </div>
+            <div className="about__feature">
+              <div className="feature-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+              </div>
+              <div>
+                <h4>Free Site Visit</h4>
+                <p>Complimentary on-site measurement and design consultation before any commitment.</p>
               </div>
             </div>
             <div className="about__feature">
@@ -73,36 +98,14 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h4>On-Time Delivery</h4>
-                <p>We respect your time — projects delivered on schedule, every single time.</p>
-              </div>
-            </div>
-            <div className="about__feature">
-              <div className="feature-icon">
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4>Best Price Guarantee</h4>
-                <p>Competitive pricing with transparent quotes — no hidden charges, ever.</p>
-              </div>
-            </div>
-            <div className="about__feature">
-              <div className="feature-icon">
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4>24/7 Support</h4>
-                <p>Round-the-clock emergency support — because plumbing problems don't wait.</p>
+                <h4>On-Time Installation</h4>
+                <p>Strict timelines respected — most residential projects completed within 3–5 days.</p>
               </div>
             </div>
           </div>
 
           <a href="#contact" className="btn btn-dark">
-            Learn More About Us
+            Book a Free Consultation
             <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

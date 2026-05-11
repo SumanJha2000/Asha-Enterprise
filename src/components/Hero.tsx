@@ -1,10 +1,10 @@
 import './Hero.css';
 
 const STATS = [
-  { value: '15+', label: 'Years Experience' },
-  { value: '2000+', label: 'Projects Completed' },
-  { value: '500+', label: 'Happy Clients' },
-  { value: '24/7', label: 'Emergency Support' },
+  { value: '12+', label: 'Years Experience' },
+  { value: '1500+', label: 'Doors Installed' },
+  { value: '400+', label: 'Happy Clients' },
+  { value: '10 Yr', label: 'Warranty Offered' },
 ];
 
 export default function Hero() {
@@ -12,29 +12,28 @@ export default function Hero() {
     <section className="hero" id="home">
       <div className="hero__bg">
         <div className="hero__overlay" />
-        <div className="hero__grid" />
       </div>
 
       <div className="container hero__content">
         <div className="hero__text">
-          <span className="badge">Trusted Plumbing Experts Since 2009</span>
+          <span className="badge">Premium Folding Door Specialists Since 2010</span>
           <h1 className="hero__title">
-            Complete Plumbing <br />
-            <span className="hero__title-accent">Solutions & Products</span>
+            Transform Your Space with <br />
+            <span className="hero__title-accent">Beautiful Folding Doors</span>
           </h1>
           <p className="hero__desc">
-            Asha Enterprise is your one-stop destination for premium plumbing products,
-            professional installation services, and reliable maintenance — for homes and businesses alike.
+            Asha Enterprise designs, supplies and installs premium UPVC, aluminium, wooden and glass
+            folding doors for homes and businesses — built to last, styled to impress.
           </p>
           <div className="hero__actions">
             <a href="#contact" className="btn btn-primary">
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
-              Get Free Enquiry
+              Get Free Quote
             </a>
-            <a href="#services" className="btn btn-outline">
-              Our Services
+            <a href="#products" className="btn btn-outline">
+              View Products
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
@@ -45,51 +44,58 @@ export default function Hero() {
               <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Licensed & Insured
+              Free Site Measurement
             </div>
             <div className="trust-item">
               <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Quality Guaranteed
+              10-Year Warranty
             </div>
             <div className="trust-item">
               <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              Best Price Promise
+              Custom Sizes Available
             </div>
           </div>
         </div>
 
-        <div className="hero__card-wrap">
-          <div className="hero__card">
-            <div className="hcard__icon">
-              <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 22V12h6v10" />
+        <div className="hero__img-col">
+          <div className="hero__main-img">
+            <img
+              src="https://images.unsplash.com/photo-1600585154526-990dced4db3d?auto=format&fit=crop&w=720&q=85"
+              alt="Beautiful folding doors in a modern home"
+            />
+            <div className="hero__img-badge">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
+              Premium Quality
             </div>
-            <h3>Residential</h3>
-            <p>Complete home plumbing — installation, repair & maintenance for all household needs.</p>
           </div>
-          <div className="hero__card">
-            <div className="hcard__icon hcard__icon--accent">
-              <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
+          <div className="hero__thumb-row">
+            <div className="hero__thumb">
+              <img
+                src="https://images.unsplash.com/photo-1758998256408-ab2c9fbec19b?auto=format&fit=crop&w=300&q=80"
+                alt="Aluminium bifold door"
+              />
+              <span>Aluminium</span>
             </div>
-            <h3>Commercial</h3>
-            <p>Industrial-grade plumbing for offices, factories, hotels, and large commercial buildings.</p>
-          </div>
-          <div className="hero__card">
-            <div className="hcard__icon hcard__icon--green">
-              <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-              </svg>
+            <div className="hero__thumb">
+              <img
+                src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=300&q=80"
+                alt="Wooden folding door"
+              />
+              <span>Wooden</span>
             </div>
-            <h3>Products</h3>
-            <p>Premium pipes, fittings, valves, pumps and sanitary ware from top brands.</p>
+            <div className="hero__thumb">
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=300&q=80"
+                alt="Glass partition door"
+              />
+              <span>Glass</span>
+            </div>
           </div>
         </div>
       </div>

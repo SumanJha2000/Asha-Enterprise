@@ -11,33 +11,25 @@
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0f2540 0%, #1a3a5c 50%, #1e4d7d 100%);
+  background:
+    linear-gradient(135deg, rgba(15, 37, 64, 0.94) 0%, rgba(26, 58, 92, 0.88) 50%, rgba(30, 77, 125, 0.82) 100%),
+    url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 40%, rgba(33, 150, 243, 0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 80%, rgba(249, 115, 22, 0.1) 0%, transparent 50%);
-}
-
-.hero__grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background: radial-gradient(ellipse at 70% 30%, rgba(249, 115, 22, 0.08) 0%, transparent 55%);
 }
 
 .hero__content {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 56px;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 72px;
 }
 
 .hero__text {
@@ -47,7 +39,7 @@
 }
 
 .hero__title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -58,7 +50,7 @@
 }
 
 .hero__desc {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   color: rgba(255, 255, 255, 0.78);
   max-width: 480px;
   line-height: 1.7;
@@ -92,63 +84,86 @@
   flex-shrink: 0;
 }
 
-/* Card column */
-.hero__card-wrap {
+/* Image column */
+.hero__img-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
-.hero__card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.hero__main-img {
+  position: relative;
   border-radius: var(--radius-lg);
-  padding: 22px 24px;
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-  backdrop-filter: blur(8px);
-  transition: all 0.25s ease;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  aspect-ratio: 4/3;
 }
 
-.hero__card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateX(6px);
+.hero__main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.hcard__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: rgba(33, 150, 243, 0.2);
-  color: #60c8ff;
+.hero__main-img:hover img {
+  transform: scale(1.03);
+}
+
+.hero__img-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 7px 14px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 
-.hcard__icon--accent {
-  background: rgba(249, 115, 22, 0.2);
-  color: #fdba74;
+.hero__thumb-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 
-.hcard__icon--green {
-  background: rgba(74, 222, 128, 0.15);
-  color: #4ade80;
+.hero__thumb {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
-.hero__card h3 {
-  font-size: 1.05rem;
+.hero__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero__thumb:hover img {
+  transform: scale(1.08);
+}
+
+.hero__thumb span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  color: white;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--white);
-  margin-bottom: 4px;
-}
-
-.hero__card p {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.55;
+  padding: 18px 10px 8px;
+  text-align: center;
 }
 
 /* Stats bar */
@@ -196,27 +211,20 @@
     gap: 40px;
   }
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-  .hero__card-wrap {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .hero__card {
-    flex: 1 1 240px;
-    flex-direction: column;
-    gap: 12px;
+  .hero__img-col {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
 @media (max-width: 640px) {
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .hero__card-wrap {
-    flex-direction: column;
   }
 }

@@ -10,15 +10,15 @@ type FormState = {
 };
 
 const SERVICES = [
-  'Residential Plumbing',
-  'Commercial Plumbing',
-  'Pipeline Installation',
-  'Leak Detection & Repair',
-  'Bathroom Renovation',
-  'Emergency Service',
-  'Water Tank Installation',
-  'Pump Installation & Service',
-  'Product Purchase / Enquiry',
+  'Residential Bifold Installation',
+  'Commercial Door Project',
+  'Custom Manufacturing',
+  'Repair & Servicing',
+  'Measurement & Design Consultation',
+  'Wardrobe Door Systems',
+  'Glass Partition Systems',
+  'Emergency Repair',
+  'Product / Price Enquiry',
   'Other',
 ];
 

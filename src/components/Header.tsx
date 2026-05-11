@@ -36,7 +36,7 @@ export default function Header() {
           </span>
           <span className="logo-text">
             <span className="logo-name">Asha</span>
-            <span className="logo-tag">Enterprise</span>
+            <span className="logo-tag">Folding Doors</span>
           </span>
         </a>
 

@@ -1,168 +1,138 @@
 import { useState } from 'react';
 import './Products.css';
 
-const CATEGORIES = ['All', 'Pipes & Fittings', 'Valves', 'Pumps', 'Sanitary Ware', 'Water Tanks', 'Bathroom Fittings'];
+const CATEGORIES = ['All', 'UPVC', 'Aluminium', 'Wooden', 'Glass & Partition', 'Wardrobe', 'Accessories'];
 
 const PRODUCTS = [
   {
-    category: 'Pipes & Fittings',
-    name: 'CPVC Pipes & Fittings',
-    desc: 'Hot & cold water supply pipes. Chemical resistant, pressure rated up to 20 kg/cm². Available in ½" to 4" diameter.',
-    specs: ['Temp: up to 93°C', 'Pressure: 20 kg/cm²', 'Sizes: ½"–4"'],
-    price: 'From ₹45/metre',
+    category: 'UPVC',
+    name: 'UPVC Bifold Doors',
+    img: 'https://images.unsplash.com/photo-1600585154526-990dced4db3d?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Energy-efficient white UPVC bifold doors with multi-point locking and double-glazed units. Ideal for patios and garden access.',
+    specs: ['Double glazed', 'A-rated energy', 'Multi-point lock'],
+    price: 'From ₹18,000/panel',
     tag: 'Bestseller',
     tagColor: '#f97316',
   },
   {
-    category: 'Pipes & Fittings',
-    name: 'UPVC Drainage Pipes',
-    desc: 'High-durability underground drainage and sewage pipes. UV resistant with smooth bore for efficient flow.',
-    specs: ['Size: 1"–12"', 'Pressure rated', 'UV resistant'],
-    price: 'From ₹60/metre',
+    category: 'UPVC',
+    name: 'UPVC Sliding Fold',
+    img: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Slim-line UPVC sliding folding system for wide openings. Available in white, cream and woodgrain foil finishes.',
+    specs: ['Slim frame 70mm', 'Woodgrain option', 'Weather-sealed'],
+    price: 'From ₹16,500/panel',
+    tag: null,
+    tagColor: '',
+  },
+  {
+    category: 'Aluminium',
+    name: 'Aluminium Bifold',
+    img: 'https://images.unsplash.com/photo-1758998256408-ab2c9fbec19b?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Ultra-slim thermally broken aluminium bifold doors. Maximise views and light with minimal sightlines. 30+ colour options.',
+    specs: ['20mm sightline', 'Thermal break', 'RAL colour choice'],
+    price: 'From ₹24,000/panel',
     tag: 'Popular',
     tagColor: '#2196f3',
   },
   {
-    category: 'Pipes & Fittings',
-    name: 'PPR Pipes (Hot/Cold)',
-    desc: 'Polypropylene random copolymer pipes ideal for drinking water and HVAC systems. No corrosion, no scaling.',
-    specs: ['Food safe', 'No rust', 'Long life'],
-    price: 'From ₹55/metre',
+    category: 'Aluminium',
+    name: 'Aluminium Concertina',
+    img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Heavy-duty aluminium concertina folding for wide commercial openings up to 12 metres. Top and bottom track options.',
+    specs: ['Up to 12m wide', 'Top/bottom track', 'Commercial grade'],
+    price: 'From ₹28,000/panel',
     tag: null,
     tagColor: '',
   },
   {
-    category: 'Pipes & Fittings',
-    name: 'GI Pipes & Fittings',
-    desc: 'Galvanised iron pipes for high-pressure and industrial applications. Strong, durable, fire-resistant.',
-    specs: ['High pressure', 'Industrial grade', 'IS certified'],
-    price: 'From ₹120/metre',
+    category: 'Wooden',
+    name: 'Solid Hardwood Bifold',
+    img: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Premium solid oak, teak or sapele hardwood bifold doors. Hand-finished to your stain or paint choice. Timeless elegance.',
+    specs: ['Solid hardwood', 'Custom stain', 'Weatherproof seal'],
+    price: 'From ₹35,000/panel',
+    tag: 'Premium',
+    tagColor: '#a855f7',
+  },
+  {
+    category: 'Wooden',
+    name: 'Engineered Timber Fold',
+    img: 'https://images.unsplash.com/photo-1722859031737-17000a5fef9e?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Engineered hardwood core with solid timber veneer — dimensionally stable and resistant to warping in humid conditions.',
+    specs: ['Stable core', 'Veneer finish', 'FSC certified'],
+    price: 'From ₹28,500/panel',
     tag: null,
     tagColor: '',
   },
   {
-    category: 'Valves',
-    name: 'Ball Valves (Brass)',
-    desc: 'Full-bore brass ball valves for water, gas, and oil lines. Quarter-turn operation, PTFE seat, no leak.',
-    specs: ['Sizes: ¼"–4"', 'WOG 600', 'PTFE seat'],
-    price: 'From ₹120/unit',
+    category: 'Glass & Partition',
+    name: 'Frameless Glass Bifold',
+    img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Minimalist frameless toughened glass bifold panels. Create seamless indoor-outdoor connection with near-invisible hardware.',
+    specs: ['12mm toughened', 'Minimal hardware', 'Acoustic option'],
+    price: 'From ₹42,000/panel',
     tag: 'Bestseller',
     tagColor: '#f97316',
   },
   {
-    category: 'Valves',
-    name: 'Gate Valves',
-    desc: 'Robust cast iron and brass gate valves for shut-off applications in residential and industrial pipelines.',
-    specs: ['PN 16 rated', 'CI & Brass', 'Sizes: ½"–6"'],
-    price: 'From ₹180/unit',
-    tag: null,
-    tagColor: '',
-  },
-  {
-    category: 'Valves',
-    name: 'Pressure Reducing Valves',
-    desc: 'Automatic pressure regulation to protect downstream fittings and fixtures from high-pressure surges.',
-    specs: ['Adjustable', '1–10 bar', 'Self-sealing'],
-    price: 'From ₹350/unit',
-    tag: null,
-    tagColor: '',
-  },
-  {
-    category: 'Pumps',
-    name: 'Submersible Pumps',
-    desc: 'Energy-efficient submersible pumps for borewells and open wells. Single-phase and three-phase models.',
-    specs: ['0.5 HP – 5 HP', '1Ph & 3Ph', 'Auto cut-off'],
-    price: 'From ₹3,500/unit',
+    category: 'Glass & Partition',
+    name: 'Office Glass Partition',
+    img: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Demountable framed and frameless glass partition wall systems for offices. Single or double glazed with acoustic ratings.',
+    specs: ['Demountable', 'Rw 42–52dB', 'Manifestation film'],
+    price: 'From ₹8,500/sq ft',
     tag: 'Popular',
     tagColor: '#2196f3',
   },
   {
-    category: 'Pumps',
-    name: 'Centrifugal / Monoblock',
-    desc: 'Heavy-duty monoblock pumps for surface water transfer, irrigation, and pressure boosting.',
-    specs: ['1 HP – 10 HP', 'High head', 'CI body'],
-    price: 'From ₹2,800/unit',
-    tag: null,
-    tagColor: '',
-  },
-  {
-    category: 'Pumps',
-    name: 'Pressure Booster Pumps',
-    desc: 'Automatic pressure booster systems for high-rise buildings and multi-floor water supply.',
-    specs: ['Auto sensor', 'Silent', 'Compact'],
-    price: 'From ₹4,200/unit',
-    tag: null,
-    tagColor: '',
-  },
-  {
-    category: 'Sanitary Ware',
-    name: 'Western WC Suite',
-    desc: 'European-style wall-hung and floor-mounted WC with dual-flush cistern. Vitreous china, easy clean glaze.',
-    specs: ['Dual flush', 'Vitreous China', 'WELS rated'],
-    price: 'From ₹4,500/set',
-    tag: 'Bestseller',
-    tagColor: '#f97316',
-  },
-  {
-    category: 'Sanitary Ware',
-    name: 'Wash Basins',
-    desc: 'Wall-mounted and counter-top wash basins in vitreous china and ceramic. Various sizes and designs.',
-    specs: ['Wall mount', 'Counter top', 'Multiple sizes'],
-    price: 'From ₹1,200/unit',
-    tag: null,
-    tagColor: '',
-  },
-  {
-    category: 'Water Tanks',
-    name: 'PVC Water Tanks',
-    desc: 'Food-grade polyethylene water storage tanks. UV stabilised, impact resistant, BIS certified for potable water.',
-    specs: ['100 – 10,000 L', 'BIS certified', 'UV stable'],
-    price: 'From ₹1,800/unit',
+    category: 'Wardrobe',
+    name: 'Mirror Wardrobe Bifold',
+    img: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Full-length mirror panels on aluminium frames. Available in silver, gold and matte black frame finishes. Space-enhancing.',
+    specs: ['Full mirror', 'Anti-shatter', '3 frame colours'],
+    price: 'From ₹9,500/door',
     tag: 'Popular',
     tagColor: '#2196f3',
   },
   {
-    category: 'Water Tanks',
-    name: 'Stainless Steel Tanks',
-    desc: 'SS 304 food-grade stainless steel tanks for premium installations. Hygienic, rust-free, long lasting.',
-    specs: ['SS 304 grade', '500 – 5,000 L', 'Hygienic'],
-    price: 'From ₹8,500/unit',
+    category: 'Wardrobe',
+    name: 'Frosted Glass Wardrobe',
+    img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Frosted or patterned glass wardrobe doors offering soft privacy with a modern aesthetic. Custom etching available.',
+    specs: ['Frosted/patterned', 'Custom etching', 'Soft-close'],
+    price: 'From ₹11,000/door',
     tag: null,
     tagColor: '',
   },
   {
-    category: 'Bathroom Fittings',
-    name: 'Concealed Diverters & Showers',
-    desc: 'Thermostatic and manual concealed shower systems with overhead rain shower and hand shower.',
-    specs: ['Thermostat opt.', 'Anti-scale', 'Chrome finish'],
-    price: 'From ₹2,200/set',
-    tag: 'Bestseller',
-    tagColor: '#f97316',
+    category: 'Accessories',
+    name: 'Door Hardware Set',
+    img: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Premium stainless steel and brass handles, hinges, pivot sets, flush bolts and multi-point locking mechanisms.',
+    specs: ['SS 304 / Brass', 'Anti-tarnish', 'Warranty 5yr'],
+    price: 'From ₹1,200/set',
+    tag: null,
+    tagColor: '',
   },
   {
-    category: 'Bathroom Fittings',
-    name: 'Pillar & Wall Faucets',
-    desc: 'Single-lever and quarter-turn faucets in chrome, gold, and matt black finishes for basins and sinks.',
-    specs: ['Chrome / Gold', 'WELS 3 star', 'Ceramic disc'],
-    price: 'From ₹650/unit',
+    category: 'Accessories',
+    name: 'Track & Roller Systems',
+    img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=480&h=280&q=80',
+    desc: 'Heavy-duty top-hung and bottom track systems, replacement rollers, nylon glides and threshold seals for any brand.',
+    specs: ['Universal fit', 'Load 80kg/door', 'Easy replace'],
+    price: 'From ₹850/set',
     tag: null,
     tagColor: '',
   },
 ];
 
-const IconBox = ({ color }: { color: string }) => (
-  <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke={color} strokeWidth="1.5">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-  </svg>
-);
-
 const CATEGORY_COLORS: Record<string, string> = {
-  'Pipes & Fittings': '#2196f3',
-  'Valves': '#8b5cf6',
-  'Pumps': '#f97316',
-  'Sanitary Ware': '#14b8a6',
-  'Water Tanks': '#22c55e',
-  'Bathroom Fittings': '#ec4899',
+  'UPVC': '#2196f3',
+  'Aluminium': '#8b5cf6',
+  'Wooden': '#f97316',
+  'Glass & Partition': '#14b8a6',
+  'Wardrobe': '#ec4899',
+  'Accessories': '#64748b',
 };
 
 export default function Products() {
@@ -175,9 +145,9 @@ export default function Products() {
       <div className="container">
         <div className="section-header">
           <span className="badge">Product Catalogue</span>
-          <h2 className="section-title">Our Plumbing Products</h2>
+          <h2 className="section-title">Our Folding Door Range</h2>
           <p className="section-sub">
-            Premium quality plumbing materials and fixtures sourced from top Indian and international manufacturers.
+            Premium folding doors in UPVC, aluminium, hardwood and glass — for every style, budget and opening size.
           </p>
         </div>
 
@@ -201,34 +171,36 @@ export default function Products() {
                   {p.tag}
                 </span>
               )}
-              <div className="pcard-icon">
-                <IconBox color={CATEGORY_COLORS[p.category] ?? '#2196f3'} />
+              <div className="pcard-img">
+                <img src={p.img} alt={p.name} loading="lazy" />
               </div>
-              <div className="pcard-cat" style={{ color: CATEGORY_COLORS[p.category] ?? '#2196f3' }}>
-                {p.category}
-              </div>
-              <h3>{p.name}</h3>
-              <p className="pcard-desc">{p.desc}</p>
-              <ul className="pcard-specs">
-                {p.specs.map((spec) => (
-                  <li key={spec}>
-                    <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    {spec}
-                  </li>
-                ))}
-              </ul>
-              <div className="pcard-footer">
-                <span className="pcard-price">{p.price}</span>
-                <a href="#contact" className="pcard-enquire">Enquire</a>
+              <div className="pcard-body">
+                <div className="pcard-cat" style={{ color: CATEGORY_COLORS[p.category] ?? '#2196f3' }}>
+                  {p.category}
+                </div>
+                <h3>{p.name}</h3>
+                <p className="pcard-desc">{p.desc}</p>
+                <ul className="pcard-specs">
+                  {p.specs.map((spec) => (
+                    <li key={spec}>
+                      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {spec}
+                    </li>
+                  ))}
+                </ul>
+                <div className="pcard-footer">
+                  <span className="pcard-price">{p.price}</span>
+                  <a href="#contact" className="pcard-enquire">Enquire</a>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         <p className="products-note">
-          Prices are indicative and vary by quantity & specifications. Contact us for bulk pricing and custom orders.
+          All prices are indicative and vary by size, glazing type and quantity. Contact us for a personalised quote.
         </p>
       </div>
     </section>
